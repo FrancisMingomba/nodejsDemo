@@ -5,6 +5,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 
+require('./startup/prod')(app);
+
 
 mongoose.connect('mongodb://localhost/nodejsDemoDB')
     .then(() => console.log('Connected to MongoDB...'))
