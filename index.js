@@ -1,4 +1,4 @@
-
+const bcrypt = require('bcrypt');
 const Joi = require('joi');
 const users = require('./routes/users');
 const express = require('express');
