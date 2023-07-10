@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Route, Redirect, Switch } from "react-router-dom";
-
 import NavBar from "./navBar";
-import "./App.css";
+import "./index.css";
 import LoginForm from "./loginForm";
+import "./App.css";
 
 class App extends Component {
   render() {
