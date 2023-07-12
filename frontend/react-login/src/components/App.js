@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, Redirect, Switch } from "react-router-dom";
 import NavBar from "./navBar";
-import "./index.css";
+//import "./index.css";
 import LoginForm from "./loginForm";
 import "./App.css";
 
