@@ -24,14 +24,14 @@ const NavBar = () => {
           <NavLink className="nav-item nav-link" to="/home">
             Home
           </NavLink>
-          <NavLink className="nav-item nav-link" to="/Employee">
-            Employee
+          <NavLink className="nav-item nav-link" to="/login">
+            Login
           </NavLink>
-          <NavLink className="nav-item nav-link" to="/AboutUs">
-            About us
+          <NavLink className="nav-item nav-link" to="">
+            Registration
           </NavLink>
-          <NavLink className="nav-item nav-link" to="./components/loginForm">
-            Login..
+          <NavLink className="nav-item nav-link" to="/customers">
+            Customers
           </NavLink>
         </div>
       </div>
