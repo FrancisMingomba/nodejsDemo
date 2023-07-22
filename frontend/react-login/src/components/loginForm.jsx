@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Input from './input';
 
 class LoginForm extends Component {
 state = {
@@ -22,26 +23,20 @@ state = {
          <div>
             <h1>Login</h1>
             <form onSubmit={this.handleSubmit}>
-                <div className="form-group">
-                <label htmlFor="username">Username</label>
-                <input 
-                value={account.username}
-                onChange={this.handleChange}
-                autoFocus id="username"
-                name="username"
-                type="text" 
-                className="form-control"
-                />
-                </div>
+               <Input
+               name="username"
+               value={ account.username}
+               label="Username"
+               onChange={this.handleChange} 
+              />
 
-                <div className="form-group">
-                <label htmlFor="password">password</label>
-                <input
-                value={account.password}
-                onChange={this.handleChange}
-                name="password"
-                autoFocus id="password" type="text" className="form-control" /></div>
-                
+              <Input
+               name="password"
+               value={ account.password}
+               label="Password"
+               onChange={this.handleChange} 
+             />
+
                 <button className="btn btn-primary">Login</button>
             </form>
         </div>
