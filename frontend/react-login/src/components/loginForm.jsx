@@ -1,13 +1,32 @@
 import React, { Component } from 'react';
+import Joi from 'joi-browser';
 import Input from './input';
+
 
 class LoginForm extends Component {
 state = {
-    account: {username: "", password: ""}
+    account: {username: "", password: ""},
+    errors: {}
 };
+
+schema = {
+    username: Joi.string().required().label('Username'),
+    password: Joi.string().required().label('Password')
+};
+
+validate = () => {
+    const result = Joi.validate(this.state.account, this.schema, {abortEarly: false});
+    console.log(result);
+}
 
     handleSubmit = e => {
         e.preventDefault();
+
+        const errors = this.validate();
+        this.setState({errors: errors || {}});
+        if (errors) return;
+
+
         console.log("Submited");
     };
 
@@ -18,7 +37,7 @@ state = {
     }
         
     render() { 
-        const { account } = this.state;
+        const { account, errors } = this.state;
         return(
          <div>
             <h1>Login</h1>
@@ -28,6 +47,7 @@ state = {
                value={ account.username}
                label="Username"
                onChange={this.handleChange} 
+               error={errors.username}
               />
 
               <Input
@@ -35,6 +55,7 @@ state = {
                value={ account.password}
                label="Password"
                onChange={this.handleChange} 
+               error={errors.password}
              />
 
                 <button className="btn btn-primary">Login</button>
