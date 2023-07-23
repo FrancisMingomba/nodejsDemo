@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Joi from 'joi-browser';
 import Input from './input';
+import { errors } from 'joi/lib/language';
 
 
 class LoginForm extends Component {
@@ -15,15 +16,29 @@ schema = {
 };
 
 validate = () => {
-    const result = Joi.validate(this.state.account, this.schema, {abortEarly: false});
-    console.log(result);
+    const options = {abortEarly: false}
+    const {error} = Joi.validate(this.state.account, this.schema, options);
+    if (!error) return null;
+
+    for (let item of error.details)
+        errors[item.path[0]] = item.message;
+        return errors;
+};
+
+validateProperty = ({name, value}) => {
+    const obj = { [name]: value };
+    const scheme = { [name]: this.schema[name] };
+    const { error } = Joi.validate(obj, scheme);
+    if (error) return  null;
+    return error ? error.details[0].message : null;
+
 }
 
     handleSubmit = e => {
         e.preventDefault();
 
         const errors = this.validate();
-        this.setState({errors: errors || {}});
+        this.setState({errors: errors || {} });
         if (errors) return;
 
 
@@ -58,7 +73,8 @@ validate = () => {
                error={errors.password}
              />
 
-                <button className="btn btn-primary">Login</button>
+                <button
+                 disabled={this.validate()} className="btn btn-primary">Login</button>
             </form>
         </div>
         );
