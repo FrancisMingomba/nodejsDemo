@@ -1,12 +1,9 @@
 import React, { Component } from "react";
-//import { Route, Redirect, Switch } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/navBar";
-//import "./index.css";
-
 import "./App.css";
 import LoginForm from './components/loginForm';
-import Customers from "./components/customers";
+import RegisterForm from "./components/registerForm";
 
 class App extends Component {
   render() {
@@ -16,7 +13,7 @@ class App extends Component {
         <main className="container">
           <Routes>
             <Route path="login" Component={LoginForm} />
-            <Route path="customers" Component={Customers} />
+            <Route path="register" Component={RegisterForm} />
           </Routes>
         </main>
       </React.Fragment>
