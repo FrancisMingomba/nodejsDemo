@@ -1,6 +1,4 @@
-const app = require('./app');
-
-/*const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt');
 const Joi = require('joi');
 const users = require('./routes/users');
 const express = require('express');
@@ -18,8 +16,5 @@ mongoose.connect('mongodb://localhost:27017/nodejsDemoDB')
 app.use(express.json());
 app.use('/api/users', users);
 app.use('/api/auth', auth);
-*/
 
-
-const port = process.env.PORT || 8080;
-app.listen(port, () => console.log(`Listenig to port ${port}...`));
+module.exports = app;

@@ -1,7 +1,7 @@
 const bcrypt = require('bcrypt');
 const _ = require('lodash');
 const { User, validate } = require('../models/user');
-const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 const express = require('express');
 const { result } = require('lodash');
 const router = express.Router();
@@ -18,12 +18,12 @@ router.post('/', async (req, res) => {
     let _user = await User.findOne({ email: req.body.email });
     if (_user) return res.status(400).send('user already exist');
 
-    user = new User(_.pick(req.body, ['name', 'email', 'password']));
+    _user = new User(_.pick(req.body, ['name', 'email', 'password']));
     const salt = await bcrypt.genSalt(10);
-    user.password = await  bcrypt.hash(user.password, salt);
-    await user.save();
+    _user.password = await  bcrypt.hash(_user.password, salt);
+    await _user.save();
 
-    res.send(_.pick(user, ['_id', 'name', 'email']));
+    res.send(_.pick(_user, ['_id', 'name', 'email']));
 });
 
 router.put('/:id', async (req, res) => {
