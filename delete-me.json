@@ -1,0 +1,74 @@
+{
+  "users": [
+    {
+      "_id": "65d3de0c06e3b0c935f196b6",
+      "name": " Aurelie",
+      "email": "aure@ha.com",
+      "password": "$2b$10$a3gGPIvt0L.kXZEucd8lhOFLrQdkeOyEf6lZ/H9Mwr65Hce3WnUHG",
+      "__v": 0
+    },
+    {
+      "_id": "65d2bf0a58e0560f59968304",
+      "name": " Francis",
+      "email": "email",
+      "password": "$2b$10$bU33Bc/FhGhOj83m9eeGQuckD43YTwlqIeU9aHlGppeFtzMbW8U8m",
+      "__v": 0
+    },
+    {
+      "_id": "65d2c054fcdcd3c23b65a176",
+      "name": " Francis",
+      "email": "fr@ha.com",
+      "password": "$2b$10$Tw5WAloTe8ZyW4VNjqwQv.GvEgxSf2EJ.WNDd8ZrHpwRnTWrQLjJm",
+      "__v": 0
+    },
+    {
+      "_id": "65d4d8fd1e0b063218bdf228",
+      "name": " Josiana",
+      "email": "josiana@ha.com",
+      "password": "$2b$10$fzDyLlUlCHvGbGAfviJZMOi7EonGLGqF7bEyYb/Wnc6Hsf0LVHGPG",
+      "__v": 0
+    },
+    {
+      "_id": "65d409f05e9a717e8f06c3b8",
+      "name": " Simonis",
+      "email": "simonia@ha.com",
+      "password": "$2b$10$zHpbbXrgnVGXrWaSMnKKTOIlg5EqE8f2VrlaLSOwWd4iBHovKnUf6",
+      "__v": 0
+    },
+    {
+      "_id": "65d8c37ca385ac83e0a57b73",
+      "name": "DeoAv",
+      "email": "doe@yahoo.com",
+      "password": "$2b$10$BkK1gAFkwzYylYaGp0Bza.2Iu/T2nvFugvco7dnjeLYB7ZD9hn4XK",
+      "__v": 0
+    },
+    {
+      "_id": "65d768cc84448ff2b1889977",
+      "name": "Miracle",
+      "email": "miraclc@yahoo.com",
+      "password": "$2b$10$ZxXDQwCA4gL6n16svTYOfOQY9pgSbAdBHiKFM3OCUR0l6gF.3wmlS",
+      "__v": 0
+    },
+    {
+      "_id": "65dae8bc11d2ed36f54b775c",
+      "name": "Natacha",
+      "email": "tash@gmail.com",
+      "password": "$2b$10$WauAPymri70bfGcEBbE7Vuo5ZrSQGZi/jTCig50BUnaE5HCO7ZXi2",
+      "__v": 0
+    },
+    {
+      "_id": "65dae3904be775b10b19403b",
+      "name": "Suzzy",
+      "email": "suzzy@ha.com",
+      "password": "$2b$10$fSfttC9RHwUmltbankuiY.Uoqm9qJ.qeLW2ZyGf23jWQBZdUX.hgK",
+      "__v": 0
+    },
+    {
+      "_id": "65d76d78c1c0ab3967829eaf",
+      "name": "mingo",
+      "email": "ming@yahoo.com",
+      "password": "$2b$10$evAecrk6s/b5fvhpU8yroualcpdWkMjA3LIXIk59OKiefSnOKiYVK",
+      "__v": 0
+    }
+  ]
+}
