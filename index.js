@@ -22,6 +22,7 @@ mongoose.connect('mongodb://localhost:27017/nodejsDemoDB')
 
 app.use(express.json());
 app.use('/api/users', users);
+app.use('/api/users/me', users);
 app.use('/api/auth', auth);
 
 
