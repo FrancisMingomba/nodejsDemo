@@ -2,9 +2,11 @@ const auth = require('../middleware/auth');
 const bcrypt = require('bcrypt');
 const _ = require('lodash');
 const { User, validate } = require('../models/user');
- const express = require('express');
+const express = require('express');
 const { result } = require('lodash');
 const router = express.Router();
+const cors = require('cors');
+
 
 router.get('/me', auth, async (req,res) => {
     const user = await User.findById(req.user._id).select('-password');
