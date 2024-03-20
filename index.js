@@ -3,11 +3,15 @@ const bcrypt = require('bcrypt');
 const Joi = require('joi');
 const users = require('./routes/users');
 const genres = require('./routes/genres');
+const customers = require('./routes/customers');
+const auth = require('./routes/auth');
+const book = require('./routes/books');
+const rental = require('./routes/rental');
 const express = require('express');
 const mongoose = require('mongoose');
-const auth = require('./routes/auth');
 const cors = require('cors');
 const app = express();
+
 
 
 if (!config.get('jwtPrivateKey')) {
@@ -30,6 +34,9 @@ app.use('/api/users', users);
 app.use('/api/users/me', users);
 app.use('/api/auth', auth);
 app.use('/api/genres', genres);
+app.use('/api/customers', customers);
+app.use('/api/rental', rental);
+app.use('/api/book', book);
 
 
 
